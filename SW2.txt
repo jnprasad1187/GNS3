@@ -1,0 +1,120 @@
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname SW2
+!
+boot-start-marker
+boot-end-marker
+!
+username cisco privilege 15 secret 0 cisco
+no aaa new-model
+!
+no ip domain-lookup
+ip domain-name ccie40013.com
+ip cef
+no ipv6 cef
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+interface GigabitEthernet0/2
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet0/0
+ description To Local LAN using CLOUD
+ no switchport
+ ip address 192.168.86.244 255.255.255.0
+ negotiation auto
+!
+interface GigabitEthernet0/1
+ description L3 to R02
+ no switchport
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ description L2 to SW1
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ description L2 to SW1
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ description L2 to SW3
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet2/1
+ description L2 to SW4
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet2/2
+ description L2 to SW5
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet2/3
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet3/1
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet3/2
+ media-type rj45
+ negotiation auto
+!
+interface GigabitEthernet3/3
+ media-type rj45
+ negotiation auto
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip route 0.0.0.0 0.0.0.0 192.168.86.1
+!
+control-plane
+!
+line con 0
+ exec-timeout 0 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ exec-timeout 0 0
+ logging synchronous
+ login local
+ transport input all
+!
+end
+
+SW2#
