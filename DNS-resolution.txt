@@ -1,0 +1,60 @@
+┌──(joseph㉿ubuntu-VirtualBox)-[~]
+└─$ nslookup       
+> ISP01
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	ISP01
+Address: 192.168.86.251
+> ISP02
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	ISP02
+Address: 192.168.86.252
+> R01
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	R01
+Address: 192.168.86.241
+> R02
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	R02
+Address: 192.168.86.242
+> SW1
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	SW1
+Address: 192.168.86.243
+> SW2
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	SW2
+Address: 192.168.86.244
+> SW3
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	SW3
+Address: 192.168.86.245
+> SW4
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	SW4
+Address: 192.168.86.246
+> SW5
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	SW5
+Address: 192.168.86.247
+> 
+> 192.168.86.1
+1.86.168.192.in-addr.arpa	name = _gateway.
+> 
