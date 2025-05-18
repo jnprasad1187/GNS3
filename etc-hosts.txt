@@ -1,0 +1,24 @@
+┌──(joseph㉿ubuntu-VirtualBox)-[~]
+└─$ cat /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 ubuntu-VirtualBox
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+192.168.86.241 R01
+192.168.86.242 R02
+192.168.86.243 SW1
+192.168.86.244 SW2
+192.168.86.245 SW3
+192.168.86.246 SW4
+192.168.86.247 SW5
+192.168.86.251 ISP01
+192.168.86.252 ISP02
+                                                                                                                                       
+┌──(joseph㉿ubuntu-VirtualBox)-[~]
+└─$ 
